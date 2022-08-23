@@ -71,9 +71,9 @@ def solution_code_magic(line, cell):
             input_credentials(on_input)
             return
         
-        if not stepik.is_cached('step-source', step_id):
+        if not stepik.is_cached('step', step_id):
             print('Fetching step source...')
-        step = stepik.fetch_cached('step-source', step_id)
+        step = stepik.fetch_cached('step', step_id)
         if step is None:
             print('Failed to connect.')
             return
