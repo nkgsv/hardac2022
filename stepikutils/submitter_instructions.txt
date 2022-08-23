@@ -1,0 +1,16 @@
+
+To get started, do the following (just once):
+
+1. Register and login at https://stepik.org
+
+2. Join the chosen course
+
+3. Create OAuth2 keys at https://stepik.org/oauth2/applications
+
+   Select:
+   
+   * Client type: Confidential
+   
+   * Authorization grant type: Client credentials
+   
+4. Enter the created keys:
