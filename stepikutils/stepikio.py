@@ -156,7 +156,8 @@ def submit(step_id, code, lang='python3.10'):
     response = requests.post(api_url, headers=headers, json={'attempt': {'step': step_id}})
 
     result = response.json()
-    attempt = result['attempts'][0]
+    atts = [a for a in result['attempts'] if a['step'] == step_id and a['status'] == 'active']
+    attempt = atts[0]
     current_time = time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime())
     submission = {
         'time': current_time,
